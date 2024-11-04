@@ -52,10 +52,10 @@ source /opt/ros/humble/setup.bash && source install/setup.bash
 ## Usage 
 - launch `ros2_template`
 ```shell
- ros2 launch ros2_template ros2_demo.launch.py
+ ros2 launch ros2_demo ros2_demo.launch.py
 ```
 
 - run `ros2_template`
 ```shell
- ros2 run ros2_template ros2_demo
+ ros2 run ros2_demo ros2_demo
 ```
