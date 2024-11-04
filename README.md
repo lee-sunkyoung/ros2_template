@@ -23,8 +23,8 @@ You may just extract part of it, or modify and proceed your development.
 
 
 
-**for better development environment.
-**
+**for better development environment.**
+
 - seperated hpp, cpp, main code.
 - launch file in two ways(py, yaml).
 - made CmakeLists more easier to edit.
