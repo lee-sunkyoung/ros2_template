@@ -12,7 +12,8 @@ You may just extract part of it, or modify and proceed your development.
 | **ROS** Humble |
 
 ## Packages
- this package has these sources.
+ **this package has these sources.**
+ 
 - simple publisher, subscriber node
 - simple server, client node
 - launch file
@@ -20,7 +21,8 @@ You may just extract part of it, or modify and proceed your development.
 - namespace
 - multithreading
 
-  for better development environment.. 
+
+ ** for better development environment.. **
 - seperated hpp, cpp, main code.
 - launch file in two ways(py, yaml).
 - made CmakeLists more easier to edit.
