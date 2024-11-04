@@ -42,7 +42,7 @@ You may just extract part of it, or modify and proceed your development.
  cd ~/${YOUR_WORKSPACE}/src
  git clone https://github.com/lee-sunkyoung/ros2_template.git
  cd ..
- colcon_build
+ colcon build
 ```
 
 ```shell
