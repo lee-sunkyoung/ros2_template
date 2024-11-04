@@ -1,0 +1,6 @@
+# ros2_demo.yaml
+# this provides more intuitive expressions than .yaml model. 
+
+pubsub_node:
+  ros__parameters:
+    initial_value: 10
