@@ -2,8 +2,7 @@
 ros2_template (full version)
 
 ## Overview
-The `ros2_template` package is a simple, but almost fully using ros2 functions for more structrual,readable code. 
-This package allow users to write down their own package more faster,and easy way.
+The ros2_template package provides a streamlined, structured foundation for creating ROS 2 packages efficiently, with readable code.
 You may just extract part of it, or modify and proceed your development.
 
 ## Development Environment
@@ -11,24 +10,35 @@ You may just extract part of it, or modify and proceed your development.
 
 | **ROS** Humble |
 
-## Packages
- **this package has these sources.**
+## Packages Description
+ **sources**
  
+ [pubsub]
 - simple publisher, subscriber node
-- simple server, client node
-- launch file
 - parameters
 - namespace
-- multithreading
 
+[ClientServer]
+- simple server, client node
+- multithreading
+- namespace
+
+[custom_msgs]
+- simple srv file
+- simple msg file
+
+[launch]
+- launch file
+
+[CmakeLists.txt & package.xml]
+- It was designed easy to edit or modify.
 
 
 **for better development environment.**
-
 - seperated hpp, cpp, main code.
 - launch file in two ways(py, yaml).
-- made CmakeLists more easier to edit.
 - added custom_msgs connections.
+
 
 ## Clone & Build
 ```shell
@@ -49,13 +59,20 @@ You may just extract part of it, or modify and proceed your development.
 source /opt/ros/humble/setup.bash && source install/setup.bash
 ```
 
-## Usage 
-- launch `ros2_template`
+## to run each node separately
+- run `pubsub`
+```shell
+ ros2 run ros2_demo pubsbub
+```
+
+- run `ClientServer`
+```shell
+ ros2 run ros2_demo ClientServer
+```
+
+## to launch both files together
+- launch `ros2_demo`
 ```shell
  ros2 launch ros2_demo ros2_demo.launch.py
 ```
 
-- run `ros2_template`
-```shell
- ros2 run ros2_demo ros2_demo
-```
