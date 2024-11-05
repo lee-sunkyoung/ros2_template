@@ -9,9 +9,15 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='ros2_demo',
-            executable='ros2_demo',
+            executable='pubsub',
             name='pubsub_node',
             output='screen',
             parameters=[{'initial_value': 10}],
+        ),
+        Node(
+            package='ros2_demo',
+            executable='ClientServer',
+            name='client_node',
+            output='screen',
         )
     ])

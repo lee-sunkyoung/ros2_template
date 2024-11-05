@@ -28,7 +28,8 @@ include_directories(
 
 # Declare the library 
 add_library(${PROJECT_NAME}_lib
-  src/ros2_demo_node.cpp
+  src/ClientServer_node.cpp
+  src/pubsub_node.cpp
 )
 
 set(DEPENDENCIES
@@ -42,13 +43,18 @@ target_link_libraries(${PROJECT_NAME}_lib)
 ament_target_dependencies(${PROJECT_NAME}_lib ${DEPENDENCIES})
 
 # Declare the executable
-add_executable(ros2_demo src/ros2_demo.cpp src/ros2_demo_node.cpp)
-target_link_libraries(ros2_demo ${PROJECT_NAME}_lib)
-ament_target_dependencies(ros2_demo ${DEPENDENCIES})
+add_executable(ClientServer src/ClientServer_node.cpp src/ClientServer.cpp)
+target_link_libraries(ClientServer ${PROJECT_NAME}_lib)
+ament_target_dependencies(ClientServer ${DEPENDENCIES})
+
+add_executable(pubsub src/pubsub_node.cpp src/pubsub.cpp)
+target_link_libraries(pubsub ${PROJECT_NAME}_lib)
+ament_target_dependencies(pubsub ${DEPENDENCIES})
 
 # Install
 install(TARGETS
-  ros2_demo
+  ClientServer
+  pubsub
   DESTINATION lib/${PROJECT_NAME}
 )
 
